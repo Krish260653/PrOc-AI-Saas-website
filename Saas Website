@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Launch – SaaS Platform</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#f7f8fa;
+  --text:#111;
+  --card:#fff;
+  --primary:#2563eb;
+}
+body.dark{
+  --bg:#0f172a;
+  --text:#f8fafc;
+  --card:#1e293b;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:var(--bg);color:var(--text);transition:.3s;}
+section{padding:80px 60px;}
+h2{text-align:center;font-size:36px;margin-bottom:50px;}
+p{color:#666;}
+body.dark p{color:#cbd5e1;}
+
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 60px;background:var(--card);position:sticky;top:0;
+}
+nav ul{display:flex;gap:20px;list-style:none;}
+.btn{
+  background:var(--primary);color:#fff;border:none;
+  padding:10px 18px;border-radius:20px;cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;
+}
+.hero h1{font-size:48px;}
+.hero-img{
+  height:320px;border-radius:20px;
+  background:linear-gradient(135deg,#2563eb,#60a5fa);
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/044/301/734/small_2x/program-code-of-matrix-on-black-background-animation-green-text-from-set-of-codes-providing-matrix-database-large-green-matrix-style-text-on-black-background-video.jpg);
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-size:45px;font-weight:900;
+}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+.card{
+  background:var(--card);padding:30px;border-radius:16px;transition:.3s;
+}
+.card:hover{transform:translateY(-6px);}
+
+/* DASHBOARD */
+.dashboard{background:var(--card);padding:30px;border-radius:20px;}
+.graph{
+  display:flex;gap:15px;align-items:flex-end;height:180px;margin-top:30px;
+}
+.bar{
+  flex:1;border-radius:10px 10px 0 0;
+  background:linear-gradient(180deg,#2563eb,#60a5fa);
+}
+
+/* PRODUCTS */
+.product-img{
+  height:0px;border-radius:14px;margin-bottom:15px;
+  
+  
+}
+/* FAQ */
+.faq-item{margin-bottom:15px;}
+.faq-q{
+  background:var(--card);padding:15px;border-radius:10px;cursor:pointer;
+}
+.faq-a{display:none;padding:15px;}
+
+/* CTA */
+.cta{
+  background:linear-gradient(135deg,#2563eb,#1e40af);
+  color:white;border-radius:30px;text-align:center;
+}
+
+/* FOOTER */
+footer{background:var(--card);padding:40px;text-align:center;}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;text-align:center;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>PrOc AI</h2>
+  <ul>
+    <li>Product</li><li>Pricing</li><li>AI</li><li>Help</li>
+  </ul>
+  <button class="btn" onclick="toggleTheme()">🌙</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Build & Launch smarter with AI-powered software.</h1>
+    <p>Automate workflows, track growth and scale faster.</p><br>
+    <button class="btn">Start Free Trial</button>
+  </div>
+  <div class="hero-img">PrOc AI</div>
+</section>
+
+<!-- DASHBOARD -->
+<section>
+<h2>Dashboard Overview</h2>
+<div class="dashboard">
+  <div class="grid">
+    <div class="card">Users<br><b>12,340</b></div>
+    <div class="card">Revenue<br><b>$24,900</b></div>
+    <div class="card">Growth<br><b>+32%</b></div>
+  </div>
+
+  <div class="graph">
+    <div class="bar" style="height:60%"></div>
+    <div class="bar" style="height:80%"></div>
+    <div class="bar" style="height:50%"></div>
+    <div class="bar" style="height:90%"></div>
+    <div class="bar" style="height:70%"></div>
+  </div>
+</div>
+</section>
+
+<!-- PRODUCTS -->
+<section>
+<h2>Our Products</h2>
+<div class="grid">
+  <div class="card">
+    <div class="product-img"></div>
+    <img src="https://simone.app/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fsimone_public_bucket%2Fgeneral%2Fblog%2Fassistant-ia.jpg%3Fw%3D2464%26h%3D1280%26fit%3Dcrop%26auto%3Dformat&w=3840&q=75" height="180px" alt="">
+    <h3>AI Assistant</h3>
+    <p>$19 / month</p><br>
+    <button class="btn">Buy Now</button>
+  </div>
+  <div class="card">
+    <div class="product-img"></div>
+    <img src="https://lh4.googleusercontent.com/proxy/---uyupW8RtdrGgw-gN0p6Pot4LWJq3iKemFkjSL7GK4BhCMOogWtp5WVL--e8epRZsjM3wtkhuvL8b73z_eXwpgLNt5KorRQc8xgQ" height="180px" alt="">
+    <h3>Analytics Pro</h3>
+    <p>$29 / month</p><br>
+    <button class="btn">Buy Now</button>
+  </div>
+  <div class="card">
+    <div class="product-img"></div>
+    <img src="https://www.kuka.com/-/media/swisslog-healthcare/images/test-images/electronic-industry-blog_main-image-920x460.jpeg?rev=-1&w=1900&hash=4B6D38C05BD18467B8BCF426AC101D62" height="140px" alt="">
+    <h3>Automation Suite</h3>
+    <p>$49 / month</p><br>
+    <button class="btn">Buy Now</button>
+  </div>
+  <div class="card">
+    <div class="product-img"></div>
+    <img src="https://simone.app/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fsimone_public_bucket%2Fgeneral%2Fblog%2Fassistant-ia.jpg%3Fw%3D2464%26h%3D1280%26fit%3Dcrop%26auto%3Dformat&w=3840&q=75" height="180px" alt="">
+    <h3>AI Assistant</h3>
+    <p>$19 / month</p><br>
+    <button class="btn">Buy Now</button>
+  </div>
+  <div class="card">
+    <div class="product-img"></div>
+    <img src="https://lh4.googleusercontent.com/proxy/---uyupW8RtdrGgw-gN0p6Pot4LWJq3iKemFkjSL7GK4BhCMOogWtp5WVL--e8epRZsjM3wtkhuvL8b73z_eXwpgLNt5KorRQc8xgQ" height="180px" alt="">
+    <h3>Analytics Pro</h3>
+    <p>$29 / month</p><br>
+    <button class="btn">Buy Now</button>
+  </div>
+  <div class="card">
+    <div class="product-img"></div>
+    <img src="https://www.kuka.com/-/media/swisslog-healthcare/images/test-images/electronic-industry-blog_main-image-920x460.jpeg?rev=-1&w=1900&hash=4B6D38C05BD18467B8BCF426AC101D62" height="140px" alt="">
+    <h3>Automation Suite</h3>
+    <p>$49 / month</p><br>
+    <button class="btn">Buy Now</button>
+  </div>
+  <div class="card">
+    <div class="product-img"></div>
+    <img src="https://lh4.googleusercontent.com/proxy/---uyupW8RtdrGgw-gN0p6Pot4LWJq3iKemFkjSL7GK4BhCMOogWtp5WVL--e8epRZsjM3wtkhuvL8b73z_eXwpgLNt5KorRQc8xgQ" height="180px" alt="">
+    <h3>Analytics Pro</h3>
+    <p>$29 / month</p><br>
+    <button class="btn">Buy Now</button>
+  </div>
+  <div class="card">
+    <div class="product-img"></div>
+    <img src="https://www.kuka.com/-/media/swisslog-healthcare/images/test-images/electronic-industry-blog_main-image-920x460.jpeg?rev=-1&w=1900&hash=4B6D38C05BD18467B8BCF426AC101D62" height="140px" alt="">
+    <h3>Automation Suite</h3>
+    <p>$49 / month</p><br>
+    <button class="btn">Buy Now</button>
+  </div>
+</div>
+</section>
+
+
+
+<!-- FAQ -->
+<section>
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">1. Is free plan available?</div><div class="faq-a">Yes.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">2. Can I cancel anytime?</div><div class="faq-a">Absolutely.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">3. Is my data secure?</div><div class="faq-a">Enterprise-grade security.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">4. AI tools included?</div><div class="faq-a">Yes in all plans.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">5. Support available?</div><div class="faq-a">24/7 support.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">6. Team access?</div><div class="faq-a">Yes.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">7. Payment methods?</div><div class="faq-a">Cards & UPI.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">8. Mobile friendly?</div><div class="faq-a">Fully responsive.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">9. Trial period?</div><div class="faq-a">7 days.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">10. Custom plan?</div><div class="faq-a">Available for enterprise.</div></div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>Ready to grow faster?</h2>
+<button class="btn">Get Started</button>
+</section>
+
+<footer>
+<p>©️ 2026 Launch Inc • Privacy • Terms</p>
+</footer>
+
+<script>
+function toggleTheme(){
+  document.body.classList.toggle("dark");
+  localStorage.setItem("theme",document.body.classList.contains("dark"));
+}
+if(localStorage.getItem("theme")=="true"){document.body.classList.add("dark");}
+
+function toggleFaq(el){
+  let a = el.nextElementSibling;
+  a.style.display = a.style.display==="block"?"none":"block";
+}
+</script>
+
+<!-- CART MODAL -->
+<div id="cartModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;z-index:1000;">
+  <div style="background:var(--card);padding:30px;border-radius:20px;width:350px;position:relative;">
+    <span onclick="closeCart()" style="position:absolute;top:10px;right:15px;cursor:pointer;font-weight:bold;">&times;</span>
+    <h3>Your Cart</h3>
+    <div id="cartItems" style="margin-top:15px;"></div>
+    <p>Total: $<span id="cartTotal">0</span></p>
+    <button class="btn" onclick="checkout()">Checkout</button>
+  </div>
+</div>
+
+<!-- AI CHATBOT BUTTON -->
+<button id="chatBtn" style="position:fixed;bottom:20px;right:20px;border:none;background:#2563eb;color:white;padding:15px;border-radius:50%;cursor:pointer;z-index:1000;">💬</button>
+
+<!-- AI CHATBOT MODAL -->
+<div id="chatModal" style="display:none;position:fixed;bottom:70px;right:20px;width:300px;height:400px;background:var(--card);border-radius:20px;padding:15px;box-shadow:0 5px 15px rgba(0,0,0,0.3);z-index:1000;display:flex;flex-direction:column;">
+  <div style="flex:1;overflow-y:auto;" id="chatContent"></div>
+  <input type="text" id="chatInput" placeholder="Ask AI..." style="padding:10px;border-radius:10px;border:1px solid #ccc;margin-top:10px;" />
+  <button class="btn" style="margin-top:5px;" onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+// ----------------- CART FUNCTIONALITY -----------------
+let cart = [];
+
+function addToCart(name, price) {
+  cart.push({name, price});
+  updateCart();
+  document.getElementById('cartModal').style.display = 'flex';
+}
+
+function updateCart() {
+  let cartItems = document.getElementById('cartItems');
+  cartItems.innerHTML = '';
+  let total = 0;
+  cart.forEach(item=>{
+    cartItems.innerHTML += `<p>${item.name} - $${item.price}</p>`;
+    total += item.price;
+  });
+  document.getElementById('cartTotal').innerText = total;
+}
+
+function closeCart() { document.getElementById('cartModal').style.display = 'none'; }
+function checkout() { alert("Checkout successful!"); cart=[]; updateCart(); closeCart(); }
+
+// ----------------- AI CHATBOT FUNCTIONALITY -----------------
+let chatBtn = document.getElementById('chatBtn');
+let chatModal = document.getElementById('chatModal');
+let chatContent = document.getElementById('chatContent');
+
+chatBtn.onclick = ()=>{ chatModal.style.display = chatModal.style.display==='flex'?'none':'flex'; }
+function sendMessage(){
+  let input = document.getElementById('chatInput');
+  let msg = input.value.trim();
+  if(!msg) return;
+  chatContent.innerHTML += `<p><b>You:</b> ${msg}</p>`;
+  
+  // Simple AI simulated responses
+  let response = "Sorry, I can't answer that. Try asking about products, pricing, or support.";
+  msg = msg.toLowerCase();
+  if(msg.includes("price")) response = "Our product prices are displayed in the Products section.";
+  else if(msg.includes("ai assistant")) response = "AI Assistant is available at $19/month.";
+  else if(msg.includes("support")) response = "24/7 support is available for all plans.";
+  else if(msg.includes("buy")) response = "Click the 'Buy Now' button on the product you want to purchase.";
+  
+  chatContent.innerHTML += `<p><b>AI:</b> ${response}</p>`;
+  chatContent.scrollTop = chatContent.scrollHeight;
+  input.value='';
+}
+
+// ----------------- UPDATE EXISTING BUY NOW BUTTONS -----------------
+document.querySelectorAll('.card .btn').forEach((btn,i)=>{
+  btn.onclick = ()=>{
+    let productCard = btn.parentElement;
+    let name = productCard.querySelector('h3').innerText;
+    let priceText = productCard.querySelector('p').innerText.replace('$','').replace(' / month','');
+    let price = parseInt(priceText);
+    addToCart(name, price);
+  }
+});
+</script>
+
+</body>
+</html>
